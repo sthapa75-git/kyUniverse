@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Contact Us</title>
+  <title>Social Media Content</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -27,13 +27,6 @@
   <link href="css/responsive.css" rel="stylesheet" />
 
   <style>
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    color: black;
-  }
-
     .contact_nav {
       display: flex;
       justify-content: space-between;
@@ -52,6 +45,55 @@
     }
 
     .auth-buttons a:hover {
+      text-decoration: underline;
+    }
+
+    .social-media-content {
+      padding: 30px 0;
+    }
+
+    .social-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .social-card-body {
+      padding: 15px;
+    }
+
+    .social-card-body h5 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .social-card-body p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .social-card-footer {
+      padding: 10px 15px;
+      border-top: 1px solid #ddd;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .social-card-footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .social-card-footer a:hover {
       text-decoration: underline;
     }
   </style>
@@ -86,7 +128,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">Know Our Universe</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="social.html">KYU Social</a>
                 </li>
                 <li class="nav-item">
@@ -95,7 +137,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="simulation.html">Simulation & Games</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
               </ul>
@@ -107,46 +149,69 @@
     <!-- end header section -->
   </div>
 
-  <!-- contact section -->
-  <section class="contact_section layout_padding">
+  <!-- social media content section -->
+  <section class="social-media-content">
     <div class="container">
-      <div class="heading_container">
-        <h2>
-          Contact Us
-        </h2>
-      </div>
       <div class="row">
-        <div class="col-md-6">
-          <form action="php/save_contact.php" method="POST">
-            <div>
-                <input type="text" name="name" placeholder="Name" required />
+        <div class="col-md-6 col-lg-4">
+          <div class="social-card">
+            <img src="images/social1.jpeg" alt="Post Image">
+            <div class="social-card-body">
+              <h5>SpaceX launches Starlink satellites
+              </h5>
+              <p>
+                A Falcon 9 rocket carrying 24 of the company's Starlink satellites lifted off from NASA's Kennedy Space Center in Florida on Tuesday (Nov. 26) at 11:41 p.m. EST (0441 GMT on Wednesday, Nov. 27).
+
+The satellites were deployed into low Earth orbit about 65 minutes later as planned. It was the 400th successful mission for the workhorse rocket, which debuted in 2010, SpaceX announced via X on Wednesday (Nov. 27).
+              </p>
             </div>
-            <div>
-                <input type="text" name="phone_number" placeholder="Phone Number" />
+            <div class="social-card-footer">
+              <a href="#">Read More</a>
+              <span>5 mins ago</span>
             </div>
-            <div>
-                <input type="email" name="email" placeholder="Email" required />
-            </div>
-            <div>
-                <textarea name="message" class="message-box" placeholder="Message" required></textarea>
-            </div>
-            <div class="d-flex">
-                <button type="submit">SEND</button>
-            </div>
-        </form>        
-        
+          </div>
         </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap" style="width:100%;height:100%;"></div>
+        <div class="col-md-6 col-lg-4">
+          <div class="social-card">
+            <img src="images/social2.jpeg" alt="Post Image">
+            <div class="social-card-body">
+              <h5>NASA picks SpaceX, Blue Origin to fly lunar rover and habitat to the Moon</h5>
+              <p>
+                NASA has picked SpaceX and Blue Origin to deliver a lunar rover and habitat to the moon within the next decade.
+
+                The space agency last week announced it will assign two lunar cargo demonstration missions—one to each partner—under the companies’ contracts to build human landing systems (HLS) for the Artemis moon mission program.
+                
+            </div>
+            <div class="social-card-footer">
+              <a href="#">Read More</a>
+              <span>10 mins ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="social-card">
+            <img src="images/social3.jpeg" alt="Post Image">
+            <div class="social-card-body">
+              <h5>Boeing’s Starliner lands on Earth – without its astronauts</h5>
+              <p>
+                Boeing’s Starliner spacecraft landed in a New Mexico desert late on Friday, months after its original departure date and without the two astronauts it carried when it launched in early June.
+
+                Starliner returned to Earth seemingly without a hitch, a Nasa live stream showed, nailing the critical final phase of its mission.a Nasa live stream showed, nailing the critical final phase of its mission.
+                
+                
+                
+                              </p>
+            </div>
+            <div class="social-card-footer">
+              <a href="#">Read More</a>
+              <span>15 mins ago</span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- end contact section -->
+  <!-- end social media content section -->
 
   <!-- info section -->
   <section class="info_section">
@@ -229,15 +294,12 @@
       </p>
     </div>
   </footer>
-  <!-- footer section -->
+  <!-- end footer section -->
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
 </body>
 
 </html>

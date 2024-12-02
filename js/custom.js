@@ -1,42 +1,27 @@
-// Get Current Year
-function getCurrentYear() {
-    var d = new Date();
-    var year = d.getFullYear();
-    document.querySelector("#displayDateYear").innerText = year;
-}
-getCurrentYear()
+// JavaScript: Session Management
 
-//client section owl carousel
-$(".owl-carousel").owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    dots: false,
-    navText: [
-        '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
-        '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
-    ],
-    autoplay: true,
-    autoplayHoverPause: true,
-    responsive: {
-        0: {
-            items: 1
-        },
-        768: {
-            items: 2
-        },
-        1000: {
-            items: 2
-        }
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', () => {
+    // Select the authentication link in the header
+    const authLink = document.getElementById('auth-link');
+  
+    // Check if the user is logged in by looking for a stored username
+    const isLoggedIn = localStorage.getItem('username');
+  
+    if (isLoggedIn) {
+      // If logged in, show "Sign Out" link
+      authLink.innerHTML = '<i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out';
+      authLink.href = '#'; // Prevent default navigation
+      authLink.addEventListener('click', () => {
+        // Clear the username from localStorage to log the user out
+        localStorage.removeItem('username');
+        alert('You have signed out.');
+        window.location.reload(); // Reload the page to reflect the logged-out state
+      });
+    } else {
+      // If not logged in, show "Sign In" link
+      authLink.innerHTML = '<i class="fa fa-sign-in" aria-hidden="true"></i> Sign In';
+      authLink.href = 'signin.html'; // Redirect to the login page
     }
-});
-
-/** google_map js **/
-
-function myMap() {
-    var mapProp = {
-        center: new google.maps.LatLng(40.712775, -74.005973),
-        zoom: 18,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
+  });
+  
